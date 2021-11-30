@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ir a sophos" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-30T16:52:07" hostname="DESKTOP-5I7B8GR" time="13.139">
+  <properties/>
+  <testcase name="Obtener ofertas laborales" classname="ir a sophos" time="13.139"/>
+  <system-out><![CDATA[11:52:07.061 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+                                                                  
+
+TEST STARTED: Obtener ofertas laborales
+-------------------------------------------------------------------(ir-a-sophos;obtener-ofertas-laborales)
+before hook
+?[32m.?[0m11:52:07.746 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
+11:52:07.746 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--enable-automation, --test-type], extensions: [], prefs: {download.default_directory: /Users/julianmesa/downloads, pdfjs.disabled: true, plugins.always_open_pdf_externally: true, profile_default_content_settings.popups: 0}}, platform: ANY, version: }
+Algo
+?[32m.?[0mFin
+?[32m.?[0mafter hook
+]]></system-out>
+  <system-err><![CDATA[nov 30, 2021 11:52:07 AM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 96.0.4664.45 (76e4c1bb2ab4671b8beba3444e61c0f17584b2fc-refs/branch-heads/4664@{#947}) on port 39873
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+nov 30, 2021 11:52:09 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+]]></system-err>
+</testsuite>
