@@ -9,8 +9,13 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import starter.navigation.NavigateTo;
 import starter.questions.dashboard.OverviewData;
+import starter.questions.sophos.OfertasDisponibles;
 import starter.tasks.sophos.DoSophos;
 import starter.ui.dashboard.DashboardPage;
+import starter.ui.sophos.Constants;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
@@ -26,6 +31,9 @@ public class SophosStepDefinitions {
     @Given("(.*) va a la url de sophos")
     public void ir_url_sophos(String name) {
         this.name = name;
+        if(this.name==""){
+            this.name="Pepito";
+        }
 
     }
 
@@ -35,10 +43,17 @@ public class SophosStepDefinitions {
                 NavigateTo.theSophosSolutions(),
                 DoSophos.withCredentials()
         );
-        System.out.println("Algo");
+
     }
     @Then("imprime lo que obtuvo")
     public void imprimir_resultado() {
-        System.out.println("Fin");
+        List<String> lista = new ArrayList<>();
+        for (int i=1;i<=5;i++) {
+            String contenido = OfertasDisponibles.creditAvailable(i).answeredBy(theActorInTheSpotlight());
+            lista.add(contenido);
+        }
+        System.out.println(lista);
+
+
     }
 }
