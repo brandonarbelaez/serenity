@@ -1,4 +1,4 @@
-@stories
+#@stories
 Feature: ir a sophos
   @url
   Scenario: Obtener ofertas laborales

@@ -48,11 +48,11 @@ public class SophosStepDefinitions {
     @Then("imprime lo que obtuvo")
     public void imprimir_resultado() {
         List<String> lista = new ArrayList<>();
-        for (int i=1;i<=5;i++) {
+        for (int i=1;i<=9;i++) {
             String contenido = OfertasDisponibles.creditAvailable(i).answeredBy(theActorInTheSpotlight());
             lista.add(contenido);
         }
-        System.out.println(lista);
+        System.out.println(lista+"\n");
 
 
     }

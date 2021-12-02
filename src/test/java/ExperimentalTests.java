@@ -63,23 +63,11 @@ public class ExperimentalTests {
 
     @Test
     public void abrirUrlSophos() throws InterruptedException {
-
-        File folder = new File(UUID.randomUUID().toString());
-        //folder.mkdir();
-
         Map<String, Object> chromePrefs = new HashMap<>();
-        //chromePrefs.put("download.default_directory", "/Users/julianmesa/Downloads");
-
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("prefs", chromePrefs);
-
         WebDriver driver = new ChromeDriver(options);
-
-        // Launch Website
-        //driver.navigate().to("https://www.sophossolutions.com/");
-        //SophosStepDefinitions sophosStepDefinitions = new SophosStepDefinitions();
         Factory.call();
-
         driver.quit();
 
     }

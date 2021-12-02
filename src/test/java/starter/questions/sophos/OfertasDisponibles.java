@@ -17,7 +17,15 @@ public class OfertasDisponibles {
         Question<String> resultado = null;
             resultado = actor -> TextContent.of(Constants.DIV_JOBS(i)).viewedBy(actor).asString();
             lista.add(resultado.toString());
+        //System.out.println(lista);
+        return resultado;
+    }
 
+    public static Question<String> finElements() {
+        List<Object> lista = new ArrayList<>();
+        Question<String> resultado = null;
+        resultado = actor -> TextContent.of(Constants.ELEMENTS).viewedBy(actor).asString();
+        lista.add(resultado.toString());
         //System.out.println(lista);
         return resultado;
     }
