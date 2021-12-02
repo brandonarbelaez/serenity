@@ -1,6 +1,16 @@
 README
 SERENITY WEB TRAINING
 
+
+Para ejecutar por consola, agregar el proyecto como Gradle y ejecutar el siguiente comando en la terminal:
+gradle clean test -Dwebdriver.driver=chrome -Denvironment=staging --warning-mode=all
+
+
+Para ejecutar de manera grafica, dar clic derecho al archivo "CucumberTestSuite1" y run
+
+
+
+
 Install skipping the tests:
 mvn install -DskipTests
 
