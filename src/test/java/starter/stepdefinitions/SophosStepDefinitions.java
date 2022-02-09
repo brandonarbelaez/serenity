@@ -23,32 +23,34 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 public class SophosStepDefinitions {
     String name;
+    String java;
     @Before
     public void setTheStage(){
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("(.*) va a la url de sophos")
-    public void ir_url_sophos(String name) {
+    @Given("(.*) va a la url de sophos y busca (.*)")
+    public void ir_url_sophos(String name, String java) {
         this.name = name;
-        if(this.name==""){
-            this.name="Pepito";
-        }
+        this.java=java;
+
 
     }
 
     @When("obtiene las ofertas laborales")
     public void obtener_ofertas() {
+        DoSophos doSophos= new DoSophos(java);
         theActorCalled(name).attemptsTo(
                 NavigateTo.theSophosSolutions(),
                 DoSophos.withCredentials()
+                
         );
 
     }
     @Then("imprime lo que obtuvo")
     public void imprimir_resultado() {
         List<String> lista = new ArrayList<>();
-        for (int i=1;i<=9;i++) {
+        for (int i=1;i<=8;i++) {
             String contenido = OfertasDisponibles.creditAvailable(i).answeredBy(theActorInTheSpotlight());
             lista.add(contenido);
         }
